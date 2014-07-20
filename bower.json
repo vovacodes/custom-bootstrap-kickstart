@@ -1,0 +1,25 @@
+{
+  "name": "custom-bootstrap-kickstart",
+  "version": "0.1.0",
+  "authors": [
+    "wizardzloy <wizardzloy@gmail.com>"
+  ],
+  "description": "Tiny setup for kickstarting a new front-end project based on the custom Bootstrap build",
+  "keywords": [
+    "bootstrap",
+    "less",
+    "css",
+    "gulp",
+    "bower"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": ["less/!(variables).less", "./dist/fonts/*", "./dist/js/bootstrap.js"]
+    }
+  },
+  "license": "MIT",
+  "private": true
+}
