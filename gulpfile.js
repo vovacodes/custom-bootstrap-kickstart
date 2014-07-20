@@ -1,14 +1,15 @@
 'use strict';
 
 var gulp = require('gulp');
-var bower = require('gulp-bower-files');
+var mainBowerFiles = require('main-bower-files');
 var less = require('gulp-less');
 
-gulp.task('bower', function moveBowerDeps() {
-  return bower().pipe(gulp.dest('public/lib'));
+gulp.task('mainBowerFiles', function moveBowerDeps() {
+  return gulp.src(mainBowerFiles(), { base: 'bower_components' })
+      .pipe(gulp.dest('public/lib'));
 });
 
-gulp.task('bootstrap:prepareLess', ['bower'], function bootstrapPrepareLess() {
+gulp.task('bootstrap:prepareLess', ['mainBowerFiles'], function bootstrapPrepareLess() {
   return gulp.src('less/bootstrap/variables.less')
       .pipe(gulp.dest('public/lib/bootstrap/less'));
 });
