@@ -13,11 +13,11 @@
     "bower"
   ],
   "dependencies": {
-    "bootstrap": "~3.1.1"
+    "bootstrap": "~3.3.5"
   },
   "overrides": {
     "bootstrap": {
-      "main": ["less/!(variables).less", "./dist/fonts/*", "./dist/js/bootstrap.js"]
+      "main": ["less/**/!(variables).less", "./dist/fonts/*", "./dist/js/bootstrap.js"]
     }
   },
   "license": "MIT",
